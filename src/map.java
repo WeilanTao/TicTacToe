@@ -1,5 +1,3 @@
-import javax.xml.bind.annotation.XmlList;
-
 import static java.lang.String.valueOf;
 
 public class map {
@@ -37,24 +35,12 @@ public class map {
         return draw;
     }
 
-    public void setDraw(boolean draw) {
-        this.draw = draw;
-    }
-
     public boolean getP1win() {
         return p1win;
     }
 
-    public void setP1win(boolean p1win) {
-        this.p1win = p1win;
-    }
-
     public boolean getP2win() {
         return p2win;
-    }
-
-    public void setP2win(boolean p2win) {
-        this.p2win = p2win;
     }
 
     public void printTable() {
@@ -72,20 +58,22 @@ public class map {
     public void upDateTable(int r, int c, char f) throws Exception {
 //TODO Simpify the piece of logic ... string formater/string builder? setDraw; setP1WIN; setP2WIN; separate play1 and player 2
         if (r>=1 && r<=3 && c>=1 && c<=3 && (f=='x' || f=='y')) {
+            int col =2 + 4 * (c - 1);
+            int row =r * 2 + 1;
             switch (r) {
                 case 1: {
-                    line1[2 + 4 * (c - 1)] = f;
-                    table[r * 2 + 1] = valueOf(line1);
+                    line1[col] = f;
+                    table[row] = valueOf(line1);
                     break;
                 }
                 case 2: {
-                    line2[2 + 4 * (c - 1)] = f;
-                    table[r * 2 + 1] = valueOf(line2);
+                    line2[col] = f;
+                    table[row] = valueOf(line2);
                     break;
                 }
                 case 3: {
-                    line3[2 + 4 * (c - 1)] = f;
-                    table[r * 2 + 1] = valueOf(line3);
+                    line3[col] = f;
+                    table[row] = valueOf(line3);
                     break;
                 }
                 default:
@@ -95,7 +83,6 @@ public class map {
             o='o'==f? o+1:o;
             if(x+o!=9){
                 String line =table[r * 2 + 1];
-                int col =2 + 4 * (c - 1);
                 if((line.charAt(2)==line.charAt(6) && line.charAt(2)==line.charAt(10))
                         || (line1[col] == line2[col] && line1[col] == line3[col])){
                     p1win = f == 'x' ? true : false;

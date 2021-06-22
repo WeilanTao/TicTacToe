@@ -21,6 +21,7 @@ public class main {
             String s;
 
             while (true) {
+//TODO r, don't exit when whin/draw;test input;user don't have to input x/o
 
                 int p=player1? 1:2;
                 char f=player1? 'x':'o';
@@ -36,7 +37,12 @@ public class main {
 
 
                 }else if(s.equals("r")){
-//TODO r,e, don't exit when whin/draw;test input;user don't have to input x/o
+                    m=new map();
+//                    player1=true;
+//                    p=1;
+//                    f='x';
+//                    System.out.println("Player"+p+"...Please place row;colon;"+f+" or enter g for giving up");
+//                    s = stdin.readLine();
                 }else if(s.equals("e")){
                     System.out.println("Exit.");
                     break;
