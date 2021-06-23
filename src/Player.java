@@ -5,6 +5,7 @@ public class Player {
     public  boolean isTurn;
     public String name;
     private boolean isWin;
+    private boolean isGiveUp;
 
     public Player (){
     }
@@ -14,6 +15,15 @@ public class Player {
         p_f = flag;
         name="player"+p_f;
         isWin=false;
+        isGiveUp=false;
+    }
+
+    public boolean isGiveUp() {
+        return isGiveUp;
+    }
+
+    public void setGiveUp(boolean giveUp) {
+        isGiveUp = giveUp;
     }
 
     public boolean isWin() {

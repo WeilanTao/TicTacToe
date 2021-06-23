@@ -55,69 +55,94 @@ public class main {
                 char f = player.getP_f();
                 System.out.println("Player" + p.charAt(6) + "...Please place row;colon or enter g for giving up");
                 s = stdin.readLine();
-                if (s.equals("i")) {
-                    System.out.println("Please place row;colo\n Enter g for giving up \n" +
-                            "; make sure the row_index is in {1,2,3}; the col_index is in {1,2,3}; you can only place an" + f + "in your turn \n" +
-                            " Enter r to restart; \n" +
-                            " Enter e to exit");
-                    s = stdin.readLine();
-
-                }
-                if (s.equals("r")) {
-                    isStarting = true;
-                    break;
-                } else if (s.equals("e")) {
-                    System.out.println("Exit.");
-                    isExit = true;
-                    break;
-                }
-
-                //the placement logic
-                while (s == null || s.length() == 0) {
-                    System.out.println("Input can't be null");
-                    s = stdin.readLine();
-                }
 
                 try {
-                    String param[] = s.split(";");
-                    if (param.length != 2) {
-                        throw new Exception();
+
+
+                    if (s.equals("i")) {
+                        System.out.println("Please place row;colo\n Enter g for giving up \n" +
+                                "; make sure the row_index is in {1,2,3}; the col_index is in {1,2,3}; you can only place an" + f + "in your turn \n" +
+                                " Enter r to restart; \n" +
+                                " Enter e to exit");
+                        s = stdin.readLine();
+
                     }
 
-                    int row = Integer.parseInt(param[0]);
-                    int col = Integer.parseInt(param[1]);
-
-                    if (m.isOccupied(row, col)) {
-                        throw new Exception();
+                    if (s.equals("r")) {
+                        isStarting = true;
+                        break;
+                    } else if (s.equals("e")) {
+                        System.out.println("Exit.");
+                        isExit = true;
+                        break;
                     }
 
-                    player.setP_r(row);
-                    player.setP_c(col);
+                    if (s.equals("g")) {
+                        player.setGiveUp(true);
+                    }
 
-                    m.upDateTable(player);
-                    m.printTable();
+                    if (!player.isGiveUp()) {
 
-                    playerx.isTurn ^= true;
-                    playero.isTurn ^= true;
+                        //the placement logic
+                        while (s == null || s.length() == 0) {
+                            System.out.println("Input can't be null");
+                            s = stdin.readLine();
+                        }
 
-                    if (m.getDraw()) {
-                        System.out.println("TIE!");
-                        isStarting = true;
-                        break;
-                    } else if (player.isWin()) {
-                        System.out.println("Congrats! "+p+"wins!");
-                        isStarting = true;
-                        break;
+                        try {
+                            String param[] = s.split(";");
+                            if (param.length != 2) {
+                                throw new Exception();
+                            }
+
+                            int row = Integer.parseInt(param[0]);
+                            int col = Integer.parseInt(param[1]);
+
+                            if (m.isOccupied(row, col)) {
+                                throw new Exception();
+                            }
+
+                            player.setP_r(row);
+                            player.setP_c(col);
+
+                            m.upDateTable(player);
+                            m.printTable();
+
+                            playerx.isTurn ^= true;
+                            playero.isTurn ^= true;
+
+                            if (m.getDraw()) {
+                                System.out.println("TIE!");
+                                isStarting = true;
+                                break;
+                            } else if (player.isWin()) {
+                                System.out.println("Congrats! " + p + "wins!");
+                                isStarting = true;
+                                break;
+                            }
+
+                        } catch (Exception e) {
+                            System.out.println("please make sure the row_index is in {1,2,3}; " +
+                                    "the col_index is in {1,2,3}; you can only place an '" + f + "' in your turn \n You are not allowed to overwrite an occupied one\nIf you want to give up, please enter g; " +
+                                    "if you want to restart, please enter r; if you want to exit, " +
+                                    "please enter e");
+                        }
+
+                    } else {
+                        playerx.isTurn ^= true;
+                        playero.isTurn ^= true;
+                        player.setGiveUp(false);
+                    }
+
+                    if(!s.equals("i") && !s.equals("r") &&!s.equals("e") &&!s.equals("g") ){
+                        throw new Exception();
                     }
 
                 } catch (Exception e) {
-                    System.out.println("please make sure the row_index is in {1,2,3}; " +
-                            "the col_index is in {1,2,3}; you can only place an '" + f + "' in your turn \n You are not allowed to overwrite an occupied one\nIf you want to give up, please enter g; " +
-                            "if you want to restart, please enter r; if you want to exit, " +
-                            "please enter e");
-                }
 
+                }
             }
+
 
         }
 
