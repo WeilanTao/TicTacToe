@@ -26,8 +26,8 @@ public class map {
         table = new String[]{TITLE, LINE_0, ROW, valueOf(line1), ROW, valueOf(line2), ROW, valueOf(line3), ROW};
         draw = false;
 
-        x=0;
-        o=0;
+        x = 0;
+        o = 0;
         printTable();
 
     }
@@ -42,19 +42,18 @@ public class map {
         }
     }
 
-    public boolean isOccupied(int r, int c){
-        boolean isOcp=table[r * 2 + 1].charAt(2 + 4 * (c - 1)) != i ? true: false;
+    public boolean isOccupied(int r, int c) {
+        boolean isOcp = table[r * 2 + 1].charAt(2 + 4 * (c - 1)) != i ? true : false;
         return isOcp;
     }
 
     public void upDateTable(Player player) throws Exception {
-//TODO Simpify the piece of logic ... string formater/string builder?
-        int r=player.getP_r();
-        int c=player.getP_c();
-        char f=player.getP_f();
-        if (r>=1 && r<=3 && c>=1 && c<=3 && (f=='x' || f=='o')) {
-            int col =2 + 4 * (c - 1);
-            int row =r * 2 + 1;
+        int r = player.getP_r();
+        int c = player.getP_c();
+        char f = player.getP_f();
+        if (r >= 1 && r <= 3 && c >= 1 && c <= 3 && (f == 'x' || f == 'o')) {
+            int col = 2 + 4 * (c - 1);
+            int row = r * 2 + 1;
             switch (r) {
                 case 1: {
                     line1[col] = f;
@@ -74,25 +73,23 @@ public class map {
                 default:
                     break;
             }
-            x='x'==f? x+1:x;
-            o='o'==f? o+1:o;
-            if(x+o!=9){
-                String line =table[r * 2 + 1];
-                if((line.charAt(2)==line.charAt(6) && line.charAt(2)==line.charAt(10) && line.charAt(2)==f)
-                        || (line1[col] == line2[col] && line1[col] == line3[col] && line1[col]==f)){
+            x = 'x' == f ? x + 1 : x;
+            o = 'o' == f ? o + 1 : o;
+            if (x + o != 9) {
+                String line = table[r * 2 + 1];
+                if ((line.charAt(2) == line.charAt(6) && line.charAt(2) == line.charAt(10) && line.charAt(2) == f)
+                        || (line1[col] == line2[col] && line1[col] == line3[col] && line1[col] == f)) {
                     player.setWin(true);
                 }
-                if ((r + c) == 4 || r==c) {
-                    if ((line1[2] == line2[6] && line1[2] == line3[10] && line1[2] ==f )
-                            || (line1[10] == line2[6] && line1[10] == line3[2] &&line1[10] ==f )) {
+                if ((r + c) == 4 || r == c) {
+                    if ((line1[2] == line2[6] && line1[2] == line3[10] && line1[2] == f)
+                            || (line1[10] == line2[6] && line1[10] == line3[2] && line1[10] == f)) {
                         player.setWin(true);
                     }
                 }
+            } else {
+                draw = true;
             }
-            else{
-                draw=true;
-            }
-
 
 
         } else {

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4e6182fc-6e6c-41bc-a403-203b6699053b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="1200">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#976#977#0" expanded="true" />
                 <element signature="e#1003#1004#0" expanded="true" />
@@ -45,27 +44,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="16">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#993#994#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-24">
               <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,6 +79,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>is</find>
+      <find>i</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,7 +100,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="492" />
     <option name="width" value="1467" />
     <option name="height" value="1032" />
@@ -152,9 +136,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SONARLINT_ISSUES_SPLIT_PROPORTION" value="0.50331676" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1624477669704" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1624478054919" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -199,12 +184,12 @@
       <workItem from="1624266432825" duration="8888000" />
       <workItem from="1624290798042" duration="9353000" />
       <workItem from="1624373978894" duration="9229000" />
-      <workItem from="1624465178276" duration="11467000" />
+      <workItem from="1624465178276" duration="11848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38937000" />
+    <option name="totallyTimeSpent" value="39318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -217,9 +202,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.024291499" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24453442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -228,7 +212,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.14031972" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -237,7 +221,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.19182949" />
-      <window_info anchor="bottom" id="SonarLint" order="11" />
+      <window_info active="true" anchor="bottom" id="SonarLint" order="11" visible="true" weight="0.8294849" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -281,7 +265,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="-24">
           <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -292,8 +276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="1200">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#976#977#0" expanded="true" />
             <element signature="e#1003#1004#0" expanded="true" />
@@ -301,29 +285,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TickTacToe.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="16">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding>
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
           </folding>
         </state>
       </provider>

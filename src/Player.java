@@ -1,26 +1,26 @@
-
 /**
  * @author Weilan Tao
  */
 
 public class Player {
-    private int p_r=0;
-    private int p_c=0;
-    private char p_f;
-    public  boolean isTurn;
+    public boolean isTurn;
     public String name;
+    private int p_r = 0;
+    private int p_c = 0;
+    private char p_f;
     private boolean isWin;
     private boolean isGiveUp;
 
-    public Player (){
+    public Player() {
     }
-    public Player(int order,char flag){
 
-        isTurn= order==1 ? true: false;
+    public Player(int order, char flag) {
+
+        isTurn = order == 1 ? true : false;
         p_f = flag;
-        name="player"+p_f;
-        isWin=false;
-        isGiveUp=false;
+        name = "player" + p_f;
+        isWin = false;
+        isGiveUp = false;
     }
 
     public boolean isGiveUp() {
