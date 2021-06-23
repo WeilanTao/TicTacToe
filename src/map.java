@@ -40,7 +40,6 @@ public class map {
 
     public boolean isOccupied(int r, int c){
         boolean isOcp=table[r * 2 + 1].charAt(2 + 4 * (c - 1)) != i ? true: false;
-        System.out.println("ISOCCUP---"+isOcp);
         return isOcp;
     }
 
