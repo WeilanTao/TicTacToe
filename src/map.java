@@ -1,5 +1,9 @@
 import static java.lang.String.valueOf;
 
+/**
+ * @author Weilan Tao
+ */
+
 public class map {
     private static final char i = (char) 32;
     private static final String TITLE = "*TIC TAC TOE*";

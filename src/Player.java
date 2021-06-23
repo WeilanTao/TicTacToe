@@ -1,3 +1,8 @@
+
+/**
+ * @author Weilan Tao
+ */
+
 public class Player {
     private int p_r=0;
     private int p_c=0;
