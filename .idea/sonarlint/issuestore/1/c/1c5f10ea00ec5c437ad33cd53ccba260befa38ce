@@ -1,0 +1,42 @@
+
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(õˆãÖ
+Q
+java:S1066\"/Merge this if statement with the enclosing one.(îÁ»åúÿÿÿÿ8‘‡À¤£/
+O
+java:S1199E"-Extract this nested code block into a method.(ðÁ–Óûÿÿÿÿ8Óˆà¢£/
+Q
+java:S1117/"4Rename "i" which hides the field declared at line 4.(ºÁÂÆ8Óˆà¢£/
+E
+java:S11255"(Remove the literal "true" boolean value.(ê¨›“8•Ä§¤£/
+J
+java:S1125Y"(Remove the literal "true" boolean value.(íý©¿ÿÿÿÿÿ8©àÀ¤£/
+S
+java:S1197	"8Move the array designator from the variable to the type.(³ìºœùÿÿÿÿ
+a	java:S112l"FDefine and throw a dedicated exception instead of using a generic one.(‰Æáe8‘‡À¤£/
+S
+java:S1197
+"8Move the array designator from the variable to the type.(˜¨¸§þÿÿÿÿ
+J
+java:S1125^"(Remove the literal "true" boolean value.(î¡¥œüÿÿÿÿ8òÇ®¤£/
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(––ñ†úÿÿÿÿ8Ç¢Ö¤£/
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŽöÏª
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(Ä³Žå8Óˆà¢£/
+O
+java:S1135;"2Complete the task associated to this TODO comment.(†éêÙ8Óˆà¢£/
+g	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(•·½ûûÿÿÿÿ8Óˆà¢£/
+J
+java:S1125X"(Remove the literal "true" boolean value.(î¡¥œüÿÿÿÿ8©àÀ¤£/
+l
+java:S1104	"QMake table a static final constant or non-public and provide accessors if needed.(³ìºœùÿÿÿÿ
+O
+java:S1199@"-Extract this nested code block into a method.(·ÿ½äûÿÿÿÿ8Óˆà¢£/
+N
+java:S1197"8Move the array designator from the variable to the type.(ú²žÌ
+J
+java:S1125_"(Remove the literal "true" boolean value.(íý©¿ÿÿÿÿÿ8‘‡À¤£/
+S
+java:S1197"8Move the array designator from the variable to the type.(ô…€áøÿÿÿÿ
+O
+java:S1199J"-Extract this nested code block into a method.(úÀôãùÿÿÿÿ8Óˆà¢£/
+t
+java:S3776:"RRefactor this method to reduce its Cognitive Complexity from 48 to the 15 allowed.(•·½ûûÿÿÿÿ8Ã¨ü££/

@@ -11,8 +11,6 @@ public class map {
     private char line2[];
     private char line3[];
     private boolean draw;
-    private boolean p1win;
-    private boolean p2win;
 
     private int x;
     private int o;
@@ -23,8 +21,7 @@ public class map {
         line3 = new char[]{'|', i, i, i, '|', i, i, i, '|', i, i, i, '|', '3'};
         table = new String[]{TITLE, LINE_0, ROW, valueOf(line1), ROW, valueOf(line2), ROW, valueOf(line3), ROW};
         draw = false;
-        p1win = false;
-        p2win = false;
+
         x=0;
         o=0;
         printTable();
@@ -33,14 +30,6 @@ public class map {
 
     public boolean getDraw() {
         return draw;
-    }
-
-    public boolean getP1win() {
-        return p1win;
-    }
-
-    public boolean getP2win() {
-        return p2win;
     }
 
     public void printTable() {
@@ -55,9 +44,12 @@ public class map {
         return isOcp;
     }
 
-    public void upDateTable(int r, int c, char f) throws Exception {
-//TODO Simpify the piece of logic ... string formater/string builder? setDraw; setP1WIN; setP2WIN; separate play1 and player 2
-        if (r>=1 && r<=3 && c>=1 && c<=3 && (f=='x' || f=='y')) {
+    public void upDateTable(Player player) throws Exception {
+//TODO Simpify the piece of logic ... string formater/string builder?
+        int r=player.getP_r();
+        int c=player.getP_c();
+        char f=player.getP_f();
+        if (r>=1 && r<=3 && c>=1 && c<=3 && (f=='x' || f=='o')) {
             int col =2 + 4 * (c - 1);
             int row =r * 2 + 1;
             switch (r) {
@@ -83,23 +75,19 @@ public class map {
             o='o'==f? o+1:o;
             if(x+o!=9){
                 String line =table[r * 2 + 1];
-                if((line.charAt(2)==line.charAt(6) && line.charAt(2)==line.charAt(10))
-                        || (line1[col] == line2[col] && line1[col] == line3[col])){
-                    p1win = f == 'x' ? true : false;
-                    p2win = f == 'o' ? true : false;
+                if((line.charAt(2)==line.charAt(6) && line.charAt(2)==line.charAt(10) && line.charAt(2)==f)
+                        || (line1[col] == line2[col] && line1[col] == line3[col] && line1[col]==f)){
+                    player.setWin(true);
                 }
                 if ((r + c) == 4 || r==c) {
-                    if ((line1[2] == line2[6] && line1[2] == line3[10] && line1[2] != i)
-                            || (line1[10] == line2[6] && line1[10] == line3[2] &&line1[10] !=i )) {
-                        p1win = f == 'x' ? true : false;
-                        p2win = f == 'o' ? true : false;
+                    if ((line1[2] == line2[6] && line1[2] == line3[10] && line1[2] ==f )
+                            || (line1[10] == line2[6] && line1[10] == line3[2] &&line1[10] ==f )) {
+                        player.setWin(true);
                     }
                 }
             }
             else{
                 draw=true;
-                p1win=false;
-                p2win=false;
             }
 
 
